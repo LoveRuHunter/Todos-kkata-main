@@ -1,0 +1,16 @@
+.icon-pause:after {
+    content: '⏸';
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.icon-play:after {
+    content: '▶';
+    color: #cc9a9a;
+    font-size: 15px;
+    width: 45px;
+    height: 18px;
+    margin: 9px;
+    cursor: pointer;
+}
