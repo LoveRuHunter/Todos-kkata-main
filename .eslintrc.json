@@ -7,59 +7,32 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings",
-    "airbnb",
-    "prettier"
+    "plugin:import/warnings"
   ],
-  "overrides": [],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
   },
   "plugins": ["react", "prettier", "import"],
   "rules": {
-    "indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ],
+    "indent": ["error", 2],
     "prettier/prettier": "error",
     "linebreak-style": [0, "unix"],
     "quotes": ["error", "single"],
-    "semi": ["error", "always"],
-    "no-plusplus": 0,
+    "semi": 0,
     "react/react-in-jsx-scope": "off",
-    "react/state-in-constructor": 0,
     "react/prop-types": 0,
-    "react/jsx-props-no-spreading": 0,
-    "class-methods-use-this": [
-      "error",
-      {
-        "enforceForClassFields": false
-      }
-    ],
-    "import/no-unresolved": [
-      2,
-      {
-        "caseSensitive": false
-      }
-    ],
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ],
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/order": [
       2,
       {
@@ -75,5 +48,6 @@
         "moduleDirectory": ["node_modules", "src/"]
       }
     }
-  }
+  },
+  "parser": "@babel/eslint-parser"
 }
